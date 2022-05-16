@@ -8,17 +8,15 @@
 body {
     background: url('./assets/img/fon.jpg');    
     font-size: 0.525rem;
-    font-family: 'Lobster', cursive;
-    
-    
-    
+    font-family: 'Lobster', cursive;    
 }
 
 .container {
     display: flex;
     justify-content: center;
     padding-top: 1em;    
-    flex-direction: column;              
+    flex-direction: column;  
+    padding-top: 5em;
 }
 
 
@@ -49,10 +47,6 @@ body {
     box-shadow: 0 0 1.5em #130378;
     border-radius: 2em;
     width: 70em;
-
-
-
-
 }
 
 .slider-container {
@@ -61,14 +55,14 @@ body {
     width: 100%;
     max-width: 80em;
     margin: 1em auto;
-    padding: 0px 4em;
+    padding: 0 4em;
 }
 
 .signature {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 0px 1em;
+    padding: 0 1em;
     width: 62%;
 }
 
@@ -146,26 +140,20 @@ body {
     opacity: 1;
 }
 
-@media (max-width: 767px) {
-
-    .container{
-        padding: 0;
-    }
+@media (max-width: 767px) {    
     .slider-container {
             flex-direction: column-reverse;
             align-items: center;    
         } 
 
-        .slider-img{
-                padding-top: 2em;
-        }
         .img{
             width: 66em;
-
         }  
+        
         .signature{
                 width: 90%;
         }
+
         .text{
             text-align: center;
         }
@@ -178,11 +166,11 @@ body {
 }
 
 @media (max-width: 600px) {
-
     .img{
         width: 55em;
     }
 }
+
 @media (max-width: 520px) {
     .img {
         width: 80%;
@@ -192,23 +180,17 @@ body {
     }
 }
 
-@media (max-width: 400px) {
-    .wrapper {
-        width: 36em;
-        padding: 2em;
-
+@media (max-width: 400px) {    
+   .text {
+        font-size: 4.2em;  
     }
-         .text {
-                font-size: 4.2em;
-        
-            }
 
-        .slider-container{
-            width: 30em;
-        }
+  .slider-container{
+        width: 30em;
+    }
     .signature {
         width: 30em;
-                }
+    }
 }
   
 
