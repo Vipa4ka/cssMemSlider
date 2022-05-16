@@ -6,9 +6,10 @@
 
 
 body {
-    background: url('./assets/img/fon.jpg');
-    /* width: 100vw;    */
+    background: url('./assets/img/fon.jpg');    
     font-size: 0.525rem;
+    font-family: 'Lobster', cursive;
+    
     
     
 }
@@ -16,25 +17,9 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    /* width: 100vw; */
-    max-height: 38rem;
-    margin-bottom: 1%;
-    margin-top: 1%;    
-    padding: 3em;    
-        
+    padding-top: 1em;    
+    flex-direction: column;              
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    max-width: 100em;
-    max-height: 100em;
-    padding: 1em;    
-    box-shadow: 0 0 10em #130378;
-    border-radius: 8em;
-}
-
 
 
 .slider-input {
@@ -60,38 +45,40 @@ body {
 }
 
 .img {
-    display: block;
-    max-width: 100%;
-    max-height: 88%;    
-    border: 0.2em solid #130378;
+    display: block;    
     box-shadow: 0 0 1.5em #130378;
-    border-radius: 1em;
+    border-radius: 2em;
+    width: 70em;
+
+
+
+
 }
 
 .slider-container {
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
-    max-width: 80em;    
-    margin: 5em auto;
+    width: 100%;
+    max-width: 80em;
+    margin: 1em auto;
+    padding: 0px 4em;
 }
 
 .signature {
     display: flex;
     align-items: center;
     overflow: hidden;
-    max-width: 40em;
+    padding: 0px 1em;
+    width: 62%;
 }
 
 .text {
     flex-shrink: 0;
-    text-align: center;    
-    width: 100%;    
-    padding: 0 0.25em;    
+    width: 100%;
     transition: opacity ease-in-out 0.5s, transform ease-in-out 0.7s;
     opacity: 0;
     color: #130378;
-    font-size: 4em; 
+    font-size: 6em;    
 }
 
 .navigation {
@@ -103,9 +90,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7em;
+    width: 6em;
     height: 7em;
-    margin: 0 0.5em;
     background-color: transparent;       
     cursor: pointer;
 }
@@ -161,13 +147,28 @@ body {
 }
 
 @media (max-width: 767px) {
+
+    .container{
+        padding: 0;
+    }
     .slider-container {
             flex-direction: column-reverse;
             align-items: center;    
         } 
+
+        .slider-img{
+                padding-top: 2em;
+        }
         .img{
-            max-height: 89%;
+            width: 66em;
+
         }  
+        .signature{
+                width: 90%;
+        }
+        .text{
+            text-align: center;
+        }
 
      #controls-1:checked~.sliders>.slider-img:nth-child(1),
      #controls-1:checked~.slider-container .text_1 {
@@ -176,11 +177,11 @@ body {
                 }
 }
 
-@media (max-width: 550px) {
-    .text {
-            font-size: 2.9em;
-    
-        }
+@media (max-width: 600px) {
+
+    .img{
+        width: 55em;
+    }
 }
 @media (max-width: 520px) {
     .img {
@@ -197,6 +198,10 @@ body {
         padding: 2em;
 
     }
+         .text {
+                font-size: 4.2em;
+        
+            }
 
         .slider-container{
             width: 30em;
